@@ -3,7 +3,7 @@ import Wrapper from "../wrappers/Wrapper";
 
 const Footer = () => {
   return (
-    <div className="bg-[#f6f6f6] py-5 mt-10 ">
+    <div className="bg-[#f6f6f6] py-5 mt-10 mb-auto ">
       <Wrapper>
         <div className="flex justify-between">
           <h2 className="text-red-600 text-2xl font-bold leading-7">
@@ -14,7 +14,7 @@ const Footer = () => {
             Powered by <span className="underline">News API</span>
           </h4>
 
-          <div className="text-red-600 w-56">
+          <div className="text-red-600">
             <BsGithub />
           </div>
         </div>

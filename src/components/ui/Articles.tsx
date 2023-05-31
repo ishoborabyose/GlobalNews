@@ -55,9 +55,9 @@ const Articles: React.FC = () => {
   return (
     <Wrapper>
       <div className="mt-16">
-        <div className="flex justify-center items-center">
+        <div className="flex sm:flex-col justify-center items-center">
           <img
-            className="w-1/2 rounded-md "
+            className="w-1/2 rounded-md sm:w-full"
             src="https://i0.wp.com/fabukmagazine.com/wp-content/uploads/2023/02/JOHN-WICK-CHAPTER-4-Second-Trailer.jpg?resize=768%2C576&ssl=1"
             alt="netflix"
           />
@@ -82,17 +82,21 @@ const Articles: React.FC = () => {
 
         <div>
           <div className="flex justify-between my-12 py-3">
-            <h1 className="text-gray-800 text-5xl  font-bold leading-10">
+            <h1 className="text-gray-800 text-5xl sm:text-3xl font-bold leading-10">
               Latest News
             </h1>
-            <p className="text-red-600 flex items-center gap-2 text-2xl leading-7 font-bold">
+            <p className="text-red-600 flex sm:mr-0 items-center gap-2 text-2xl leading-7 font-bold">
               See all <BsArrowRight />{" "}
             </p>
           </div>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-4  sm:grid-cols-1 gap-8">
             {data.map((item, index) => (
               <div key={index}>
-                <img className="rounded-md" src={item.image} alt="capture" />
+                <img
+                  className="rounded-md sm:w-full"
+                  src={item.image}
+                  alt="capture"
+                />
                 <div>
                   <h2 className="text-gray-500 py-2 mb-2 text-lg leading-7 font-medium">
                     {item.publisher}
